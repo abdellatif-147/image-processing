@@ -15,7 +15,12 @@ $ npm run build
 # to run testing on endpoints to check if image exist and already resized or not exist and if image exist and resizing was done now
 $ npm run test
 ```
+## how to access image processing by URL
+```
+URL : baseUrl/image/resize?filename=abdo&width=600&height=55
+you can change filename based on exist in image folder and change dimension by replace value in width and height
 
+```
 ## Special Directories
 
 ### `src`
