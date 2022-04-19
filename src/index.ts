@@ -6,7 +6,7 @@ const port = 3000;
 
 app.use('/', router);
 app.listen(port, () => {
-  // console.log(`server starting on http://localhost:${port}`);
+  console.log(`server starting on http://localhost:${port}`);
 });
 
 export default app;

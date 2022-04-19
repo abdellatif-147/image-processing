@@ -16,7 +16,7 @@ describe('endpoint image processing', () => {
     );
     expect(response.status).toBe(404);
   });
-  it('check image exist and resizing was done now', async () => {
+  it('resizing image was done now', async () => {
     const response = await request.get(
       '/image/resize?filename=test&width=400&height=400'
     );
