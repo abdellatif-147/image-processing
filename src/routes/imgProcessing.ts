@@ -12,7 +12,8 @@ router.get(
     const imagePath = `src/images/full/${req.query.filename}.jpg`
     if (+width <= 0 || +height <= 0 || isNaN(+width) || isNaN(+height)) {
       res.status(400).send('please write width and height with right way')
-    }
+      return
+    }    
     const imageNewPath = `src/images/thumb/${
       req.query.filename
     }_${+width}_${+height}.jpg`
