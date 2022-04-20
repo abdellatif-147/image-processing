@@ -10,8 +10,8 @@ router.get(
     const width: number = req.query.width as unknown as number
     const height: number = req.query.height as unknown as number
     const imagePath = `src/images/full/${req.query.filename}.jpg`
-    if (width && height && (isNaN(+width) || isNaN(+height))) {
-      res.status(400).send('please write a number for width and height ')
+    if (+width <= 0 || +height <= 0 || isNaN(+width) || isNaN(+height)) {
+      res.status(400).send('please write width and height with right way')
     }
     const imageNewPath = `src/images/thumb/${
       req.query.filename
